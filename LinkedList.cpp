@@ -121,24 +121,7 @@ void List::insertAsLast(double x)
 			secondLast = tempPtr;
 			tempPtr = tempPtr->next_; // if not last item move to next until it is.
 		}
-			//tempPtr = last; // when last item, change NUll to the location to the new node
-		secondLast->next_ = last;
-
-		//tempPtr = new Node(x, tempPtr); //dosen't work
-		//Node * last = new Node(x);
-		//new Node(tempPtr->entry_, last);
-		//tempPtr->next_ = last;
-		//tempPtr->next_ = new Node(x); //breaks
-
-		//Node * first = new Node(ptr->entry_);
-		//Node * last = first;
-		//ptr = ptr->next_;
-		//while (ptr != NULL)
-		//{
-		//	last->next_ = new Node(ptr->entry_);
-		//	last = last->next_;
-		//	ptr = ptr->next_;
-		//}
+		secondLast->next_ = last; // when last item, change NUll to the location to the new node
 	}
 	size_ = size_ + 1; // changes size
 	sum_ = sum_ + x; // changes sum
